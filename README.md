@@ -29,7 +29,7 @@ En nuestro caso, se hizo una simulación de 5000 juegos, mostrando ambos escenar
 Para correr el programa solo se necesita descargar el archivo `proyecto.py` y en la consola, usar el comando: `python3 proyecto.py`
 
 ## Ejemplo de salida en la terminal
-![picture alt](Arquitectura.png)
+![picture alt](terminal.png)
 
 ## Ejemplo de gráfica comparativa
 ![picture alt](Paradoja%20Monty%20Hall.png)
