@@ -3,23 +3,11 @@ import random
 iteraciones = 1000000
 
 def puerta_ganadora():
-    num = random.randint(0, 99)
-    if num >= 0 and num < 33:
-        puerta = 1
-    elif num >= 33 and num < 66:
-        puerta = 2
-    elif num >= 66 and num < 100:
-        puerta = 3
+    puerta = random.randint(1, 3)
     return puerta
 
 def eleccion_usuario():
-    num = random.randint(0, 99)
-    if num >= 0 and num < 33:
-        eleccion = 1
-    elif num >= 33 and num < 66:
-        eleccion = 2
-    elif num >= 66 and num < 100:
-        eleccion = 3
+    eleccion = random.randint(1, 3)
     return eleccion
 
 def segunda_eleccion_usuario(primera_eleccion, puerta_g):
@@ -59,19 +47,28 @@ def ganadas_una_eleccion():
             veces_ganadas+=1
     return veces_ganadas
 
-#print("Bienvenido a la catafixia.")
-#print("En una de las 3 puertas hay un coche, en las otras 2 hay ovejas.")
 
-veces_ganadas_2_elecciones = ganadas_dos_elecciones()
-porcentaje_ganadas = (veces_ganadas_2_elecciones * 100) / iteraciones
-print("Las veces que ganaste cambiando la respuesta fue de: {0} sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_2_elecciones,iteraciones,porcentaje_ganadas))
 
-veces_ganadas_1_eleccion= ganadas_una_eleccion()
-porcentaje_ganadas = (veces_ganadas_1_eleccion * 100) / iteraciones
-print("Las veces que ganaste sin cambiar la respuesta fue de: {0} sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_1_eleccion,iteraciones,porcentaje_ganadas))
+def decision(message):
+    while True:
+        try:
+            print("")
+            dec = int(input(message))
+        except ValueError:
+            print("Escoge un numero.")
+            continue
+        else:
+            return dec
 
-#try:
- #   choose=int(input('¿Cuál escoges?\n1,2,3\nElección: '))
-#except ValueError:
- #   print("Not a number")
+
+if __name__ == "__main__":
+
+    veces_ganadas_2_elecciones = ganadas_dos_elecciones()
+    porcentaje_ganadas = (veces_ganadas_2_elecciones * 100) / iteraciones
+    print("Las veces que ganaste cambiando la respuesta fue de: {0} sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_2_elecciones,iteraciones,porcentaje_ganadas))
+
+    veces_ganadas_1_eleccion= ganadas_una_eleccion()
+    porcentaje_ganadas = (veces_ganadas_1_eleccion * 100) / iteraciones
+    print("Las veces que ganaste sin cambiar la respuesta fue de: {0} sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_1_eleccion,iteraciones,porcentaje_ganadas))
+
 
