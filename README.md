@@ -32,4 +32,4 @@ Para correr el programa solo se necesita descargar el archivo `proyecto.py` y en
 ![picture alt](Arquitectura.png)
 
 ## Ejemplo de gráfica comparativa
-![picture alt](Paradoja\ Monty Hall.png)
+![picture alt](Paradoja%20Monty%20Hall.png)
