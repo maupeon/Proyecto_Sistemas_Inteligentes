@@ -27,7 +27,7 @@ En resumen, si mantiene su elección original gana si escogió originalmente el 
 ## Nuestra simulación
 En nuestro caso, se hizo una simulación de 5000 juegos, mostrando ambos escenarios, en dónde se analiza por medio de probabilidad, cuál es la mejor decisión. Para esto, se creó un programa usando el lenguaje de programación Python con algunas librerías como numpy y matplotlb.
 
-## ¿Como correr el programa?
+## ¿Cómo correr el programa?
 
 1. Clonar el repositorio en cualquier carpeta de tu computadora
 `$ git clone https://github.com/maupeon/Proyecto_Sistemas_Inteligentes.git`
