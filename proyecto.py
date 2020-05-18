@@ -1,3 +1,10 @@
+'''
+    Mauricio Peón  A01024162
+    Romeo Varela A01020736
+    Germán Torres A01651423
+
+'''
+
 import random
 import numpy as np
 import matplotlib.pyplot as plt

@@ -26,7 +26,22 @@ En resumen, si mantiene su elección original gana si escogió originalmente el 
 
 ## Nuestra simulación
 En nuestro caso, se hizo una simulación de 5000 juegos, mostrando ambos escenarios, en dónde se analiza por medio de probabilidad, cuál es la mejor decisión. Para esto, se creó un programa usando el lenguaje de programación Python con algunas librerías como numpy y matplotlb.
-Para correr el programa solo se necesita descargar el archivo `proyecto.py` y en la consola, usar el comando: `python3 proyecto.py`
+
+## ¿Como correr el programa?
+
+1. Clonar el repositorio en cualquier carpeta de tu computadora
+`$ git clone https://github.com/maupeon/Proyecto_Sistemas_Inteligentes.git`
+2. Entrar a la carpeta del proyecto
+`$ cd Proyecto_Sistemas_Inteligentes`
+3. Dentro de la carpeta del proyecto crear un entorno virtual de python
+`$ virtualenv venv`
+4. Activar el entorno virtual
+`$ source venv/bin/activate`
+5. Instalar la libreria 'matplotlib'
+`$ pip3 install -U matplotlib`
+6. Correr el programa de python
+`$ python3 proyecto.py`
+
 
 ## Ejemplo de salida en la terminal
 ![picture alt](terminal.png)
