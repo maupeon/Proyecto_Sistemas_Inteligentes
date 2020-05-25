@@ -11,14 +11,17 @@ import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 iteraciones = 5000
 
+#Se asigna la puerta ganadora de forma aleatoria
 def puerta_ganadora():
     puerta = random.randint(1, 3)
     return puerta
 
+#Se elige una puerta de forma aleatoria
 def eleccion_usuario():
     eleccion = random.randint(1, 3)
     return eleccion
 
+#Se cambia de puerta dependiendo la primera elección y la puerta mostrada por el host
 def segunda_eleccion_usuario(primera_eleccion, puerta_g):
     if primera_eleccion == 1:
         if puerta_g != 2:
@@ -37,6 +40,7 @@ def segunda_eleccion_usuario(primera_eleccion, puerta_g):
             eleccion = 2
     return eleccion
 
+#Se itera sobre i juegos siempre cambiando de puerta y guardando el resutado del juego -> 1:Ganado 0:Perdido
 def ganadas_dos_elecciones(i,res):
     ganar = 0
     for _ in range(0,i):
@@ -50,6 +54,7 @@ def ganadas_dos_elecciones(i,res):
         res.append(ganar)
     return res
 
+#Se itera sobre i juegos nunca cambiando de puerta y guardando el resutado del juego -> 1:Ganado 0:Perdido
 def ganadas_una_eleccion(i,res):
     ganar = 0
     for _ in range(0,i):
@@ -62,6 +67,7 @@ def ganadas_una_eleccion(i,res):
         res.append(ganar)
     return res
 
+#Simulación del juego sin cambiar de puerta y guardando los promedios de ganados de cada iteración
 def Simulacion_sin_cambio():
     promedio_res = []
     eje_y = []
@@ -73,6 +79,7 @@ def Simulacion_sin_cambio():
     #plt.plot(eje_y,promedio_res,label='Sin cambio')
     return resultados
 
+#Simulación del juego cambiando de puerta y guardando los promedios de ganados de cada iteración    
 def Simulacion_con_cambio():
     promedio_res = []
     eje_y = []
@@ -92,12 +99,14 @@ def Simulacion_con_cambio():
 def Simulacion():
     print("A continuacion se mostrará una simulación escogiendo una puerta sin cambiar la decisión:\n")
     
+    #Se suman todos las veces que se ganó sin cambiar de puerta y se muestra el porcentaje de éxito 
     veces_ganadas_1_eleccion= sum(Simulacion_sin_cambio())
     porcentaje_ganadas = (veces_ganadas_1_eleccion * 100) / iteraciones
     print("Las veces que ganaste sin cambiar la respuesta fue de: {0} veces, sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_1_eleccion,iteraciones,porcentaje_ganadas))
 
     print("\nA continuacion se mostrará una simulación escogiendo una puerta cambiando la decisión:\n")
 
+    #Se suman todos las veces que se ganó cambiando de puerta y se muestra el porcentaje de éxito  
     veces_ganadas_2_elecciones = sum(Simulacion_con_cambio())
     porcentaje_ganadas = (veces_ganadas_2_elecciones * 100) / iteraciones
     print("Las veces que ganaste cambiando la respuesta fue de: {0} veces, sobre: {1} iteraciones.\nGanaste un %{2} de las veces.".format(veces_ganadas_2_elecciones,iteraciones,porcentaje_ganadas))
